@@ -71,7 +71,7 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
 	if function == "read" { //read a variable
 		var msg = "alterando retorno da mensagem!"		
 		return []byte(msg), nil 		
-		//return t.read(stub, args)
+		return t.read(stub, args)
 	}
 	fmt.Println("query did not find func: " + function)
 
